@@ -22,7 +22,60 @@
 % \setstretch{1.2}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
+ \section{Теоретическая часть}
+ 	Изменяющийся во времени сигнал $S(t)$ называется периодическим, если для него выполняется условие
+ 	\begin{equation}
+ 		S(t)=S(t+kT),
+ 	\end{equation}
+ 	где $T$-- период изменения, а $k$-- любое целое число
+Если периодическая функция $S(t)$ удовлетворяет условиям Дирихле, то есть является огранченной и имеет в пределах одного периода конечное число экстремумов и разрывов, то согласно теореме Фурье онра может быть представлена  виде тригонометричекого ряда, называемого рядом Фурье
+\begin{equation}
+	\label{eq:1}
+	S(t)=\frac{a_0}{2}+\sum_{n=1}^\infty(a_n\cos(n\Omega )+b_n\sin{n\Omega t})
+\end{equation}
+коэффициенты которго определяются из выражений
+\begin{equation}
+	\label{eq:2.1}
+	a_n=\frac{2}{T}\int\limits_{-\frac{T}{2}}^{\frac{T}{2}}S(t)\cos(n\Omega t )dt
+\end{equation}
+\begin{equation}
+	\label{eq:2.2}
+	b_n=\frac{2}{T}\int\limits_{-\frac{T}{2}}^{\frac{T}{2}}S(t)\sin(n\Omega t )dt,
+\end{equation}
+а угловая частота $\Omega$ связана с периодом $T$ соотношением:
+\begin{equation}
+	\Omega=\frac{2\pi}{T}
+\end{equation}
+Пользуясь формулами тригонометрии ряд (\ref{eq:1}) можно записать в виде
+\begin{equation}
+\label{eq:3}
+ 	S(t)=\frac{a_0}{2}+\sum_{n=1}^{\infty}A_n\cos(n\Omega t-\theta_n)
+ \end{equation} 
+ более наглядно определяющем совокупность гармонических составляющих, на которые раскладывается исходная функция $S(t)$. Такая совокупность называется спектром. Для периодических функций спектр является дискретным и состоит из постоянной составляющей, которую можно рассматривать как гарминику с нулевой частотой и амплитудой $A_0=a_0/2$ и бесконечного множества гармонических составляющих с частотами $\omega_n=n\Omega$, кратными основной частоте $\Omega$, амплитудами $A_n$ и начальными фазами $\theta_n$.
+
+ Для наглядности спектры удобно изображать в виде спектральных диаграмм -- амплитудных и фазовых.
+ Используя формулу
+ \begin{equation}
+ 	\cos\alpha=\frac{e^{i\alpha}+e^{-i\alpha}}{2}
+ \end{equation}
+ можно от (\ref{eq:3}) перейти к комплексной форму ряда Фурье
+ \begin{equation}
+ 	\label{eq:4}
+ 	S(t)=\frac{a_0}{2}+\Re\sum_{n=1}^{\infty}A_ne^{in\Omega t}=\frac{1}{2}\sum_{n=1}^{\infty}A_ne^{in\Omega t}, %как пишется крышечка??
+ \end{equation}
+ где комплексная амплитуда $A_n=A_ne^{\pi\theta_n}$ содержит информацию об комплексной амплитуде и фазе n-ой гармоники. Сравнивая ряды (\ref{eq:4}) и (\ref{eq:1}) и используя соотношения (\ref{eq:2.1}) и (\ref{eq:2.2}), можно получить формулу для вычисления комплесных амплитуд
+ \begin{equation}
+ 	A_n=\frac{2}{T}\int\limits_{-\frac{2}{T}}^{\frac{T}{2}}
+ \end{equation}
+
+ Отметим некоторые свойства рядов Фурье.
+
+ 1. Если $S(t)$- четная функция, то в выражении (\ref{eq:1}) $b_n$=0, а в разложении остаются только косинусоидальные члены.
+
+ 2. Для нечетной функции $S(t)$ в разложении (\ref{eq:1}), наоборот, лишь коэффициенты $b_n$ отличны от нуля, а в $a_n=0$;
+
+ 3. При увеличении периода сигнала $T$ расстояние по оси частот между соседними спектральными компонентами уменьшается, то есть спектр становится более <<плотным>>;
+ 4. Для импульсных сигналов, у которых промежуток времени, когда сигнал отличен от нуля, неизменен, при увеличении периода величина Фурье-компонент уменьшаетсмя обратно пропорционально T.
 \section{Разложения в ряд Фурье}
 \subsection{Треугольник}
 Функция имеет вид 
@@ -35,16 +88,25 @@
 	\right.
 \end{equation}
 \begin{gather}
-	a_n=\frac{2}{T}\left[\int\limits^0_{-\frac{T}{2}}(U_0+\frac{4U_0}{T}t)\cos(n\Omega t)dt+\int\limits_0^{\frac{T}{2}}(U_0)-\frac{4U_0}{T}t)\cos(n\Omega t)dt \right]=\\=\frac{4U_0}{\pi^2 n^2}(1-\cos{\pi n})
+	a_n=\frac{2}{T}\left[\int\limits^0_{-\frac{T}{2}}(U_0+\frac{4U_0}{T}t)\cos(n\Omega t)dt+\int\limits_0^{\frac{T}{2}}(U_0-\frac{4U_0}{T}t)\cos(n\Omega t)dt \right]=\\=
+	-\frac{U_0 (\pi  n \sin (\pi  n)+2 \cos (\pi  n)-2)}{\pi ^2 n^2}-\frac{U_0 (\pi  n \sin (\pi  n)+2 \cos (\pi  n)-2)}{\pi ^2 n^2}=\\=
+	\frac{4U_0}{\pi^2 n^2}(1-\cos{\pi n})
+	% 
 	% =\\=\frac{2}{T}\left[\frac{U_0}{n\Omega}\sin{n\Omega t}\bigg|_{-\frac{T}{2}}^0 +\frac{4U_0}{T}\left(\frac{t}{n\Omega}\sin{n\Omega t}\bigg|_{-\frac{T}{2}}^0 \right) \right]-\int\limits_{-\frac{T}{2}}^0 \frac{1}{n\Omega}\sin{n\Omega t}dt+\frac{U_0}{n\Omega}\sin{n\Omega t}\bigg|_0^{\frac{T}{2}}-\frac{4U_0}{T}\left(\frac{t}{n\Omega}\sin{n\Omega t}\bigg|_0^{\frac{T}{2}}-\int\limits_0^\frac{T}{2}\frac{1}{n\Omega}\right)
 \end{gather}
-\begin{gather}
-	a_0=\frac{2}{T}\left[\int\limits_{-\frac{T}{2}}^0 (U_0+\frac{4U_0}{T}t)dt + \int\limits_0^{\frac{T}{2}} (U_0-\frac{4U_0}{T}t)dt \right]=\\=(\text{Посчитать})
-\end{gather}
+\begin{equation}
+	a_0=\frac{2}{T}\left[\int\limits_{-\frac{T}{2}}^0 (U_0+\frac{4U_0}{T}t)dt + \int\limits_0^{\frac{T}{2}} (U_0-\frac{4U_0}{T}t)dt \right]=0+0=0
+\end{equation}
 И,наконец, разложение
 \begin{equation}
-	U(t)=\frac{4U_0}{\pi^2}\sum_{k=1}^{\inf}\frac{(1-(-1)^n)}{n^2}\sin{n\Omega t}
+	U(t)=\frac{4U_0}{\pi^2}\sum_{n=1}^{\infty}\frac{(1-(-1)^n)}{n^2}\cos{n\Omega t}
 \end{equation}
+\begin{figure}[tb]
+	\centering
+	\includegraphics[]{plot/triangle}
+	\caption{Caption here}
+	\label{fig:figure1}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Пила}
 \begin{equation}
@@ -59,18 +121,35 @@
 	a_n=\frac{2}{T}\left[\int\limits_{\frac{T}{2}}^0 0\cdot\cos{(n\Omega t)} dt+\frac{2U_0}{T}\int\limits_0^{\frac{T}{2}}t\cdot\cos(n\Omega t)dt \right]=...=\frac{U_0}{n^2\pi^2}\cdot(\cos(\pi n)-1)
 \end{equation}
 \begin{equation}
-	b_n=\frac{2}{T}\left[\int\limits_{-\frac{T}{2}}^00\cdot\sin(n\Omega t)dt + \frac{2U_0}{T}\int\limits_0^{\frac{T}{2}}t\cdot\cos(n\Omega t)dt\right]=...=\frac{U_0}{n\pi}\cdot(1-\cos(\pi n))
+	b_n=\frac{2}{T}\left[\int\limits_{-\frac{T}{2}}^00\cdot\sin(n\Omega t)dt + \frac{2U_0}{T}\int\limits_0^{\frac{T}{2}}t\cdot\sin(n\Omega t)dt\right]=...=\frac{U_0}{n\pi}\cdot(-1)^{n+1}
 \end{equation}
-Даня $a_0$ не посчитал, ну и пёс с ним. Напишу сразу разложение
 \begin{equation}
-	U(t)=\frac{a_0}{2}+\sum_{n=1}^{\inf}\left[\frac{U_0}{\pi^2n^2}\left((-1)^n-1\right)\cdot\cos(n\Omega t)+ \frac{U_0}{\pi n}(1-(-1)^n)\cdot\sin(n\Omega t)\right]
+	a_0=\frac{2}{T}\left[\int\limits_{\frac{T}{2}}^0 0\cdot dt+\frac{2U_0}{T}\int\limits_0^{\frac{T}{2}}t \,dt \right]=...=\frac{U_0}{2}
 \end{equation}
+% Даня $a_0$ не посчитал, ну и пёс с ним. Зато посчитал Федя. Напишу сразу разложение
+\begin{equation}
+	U(t)=\frac{U_0}{4}+\sum_{n=1}^{\infty}\left[\frac{U_0}{\pi^2n^2}\left((-1)^n-1\right)\cdot\cos(n\Omega t)+ (-1)^{n+1}\frac{U_0}{\pi n}\cdot\sin(n\Omega t)\right]
+\end{equation}
+\begin{figure}[tb]
+	\centering
+	\includegraphics[]{plot/pila}
+	\caption{Caption here}
+	\label{fig:figure1}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Меандр}
 \begin{equation}
-	a_n=\frac{2}{T}\int\limits_{-T/4}^{T/4} U_0\cos(n\Omega t)dt=\frac{2U_0}{T}\frac{\sin(n\Omega t)}{n\Omega}\bigg|^{T/4}_{-T/4}=\frac{U_0}{\pi n}\cdot2\sin(\frac{n\pi}{2})
+	b_n=\frac{4U_0}{T}\int\limits_{0}^{T/2} \sin(n\Omega t)dt=\frac{2U_0}{\pi n}(1-\cos(\pi n))
 \end{equation}
-
+\begin{equation}
+	U(t)=\sum_{n=1}^{\infty}\frac{2U_0}{\pi n}(1-(-1)^n)\cdot\sin(n\Omega t)
+\end{equation}
+\begin{figure}[tb]
+	\centering
+	\includegraphics[]{plot/meandr}
+	\caption{Caption here}
+	\label{fig:figure1}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
