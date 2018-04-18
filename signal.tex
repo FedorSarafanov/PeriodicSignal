@@ -1,0 +1,79 @@
+\input{text/diss}
+\usepackage{setspace}
+
+\begin{document}
+
+\def\labauthors{Понур К.А., Сарафанов Ф.Г., Сидоров Д.А.}
+\def\labgroup{420}
+\def\labnumber{3000}
+\def\labtheme{aqsdfghjkl;}
+\renewcommand{\vec}{\mathbf}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\kappa}{\varkappa}
+\renewcommand{\hat}{\widehat}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{text/titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{spacing}{1}
+\tableofcontents
+\end{spacing}
+% \setstretch{1.2}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\section{Разложения в ряд Фурье}
+\subsection{Треугольник}
+Функция имеет вид 
+\begin{equation}
+	U(t)=\left\{
+	\begin{aligned}
+		U_0+\frac{4U_0}{T}t, t\in [-\frac{T}{2},0]\\
+		U_0-\frac{4U_0}{T}t, t\in[0, \frac{T}{2}]
+	\end{aligned}
+	\right.
+\end{equation}
+\begin{gather}
+	a_n=\frac{2}{T}\left[\int\limits^0_{-\frac{T}{2}}(U_0+\frac{4U_0}{T}t)\cos(n\Omega t)dt+\int\limits_0^{\frac{T}{2}}(U_0)-\frac{4U_0}{T}t)\cos(n\Omega t)dt \right]=\\=\frac{4U_0}{\pi^2 n^2}(1-\cos{\pi n})
+	% =\\=\frac{2}{T}\left[\frac{U_0}{n\Omega}\sin{n\Omega t}\bigg|_{-\frac{T}{2}}^0 +\frac{4U_0}{T}\left(\frac{t}{n\Omega}\sin{n\Omega t}\bigg|_{-\frac{T}{2}}^0 \right) \right]-\int\limits_{-\frac{T}{2}}^0 \frac{1}{n\Omega}\sin{n\Omega t}dt+\frac{U_0}{n\Omega}\sin{n\Omega t}\bigg|_0^{\frac{T}{2}}-\frac{4U_0}{T}\left(\frac{t}{n\Omega}\sin{n\Omega t}\bigg|_0^{\frac{T}{2}}-\int\limits_0^\frac{T}{2}\frac{1}{n\Omega}\right)
+\end{gather}
+\begin{gather}
+	a_0=\frac{2}{T}\left[\int\limits_{-\frac{T}{2}}^0 (U_0+\frac{4U_0}{T}t)dt + \int\limits_0^{\frac{T}{2}} (U_0-\frac{4U_0}{T}t)dt \right]=\\=(\text{Посчитать})
+\end{gather}
+И,наконец, разложение
+\begin{equation}
+	U(t)=\frac{4U_0}{\pi^2}\sum_{k=1}^{\inf}\frac{(1-(-1)^n)}{n^2}\sin{n\Omega t}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Пила}
+\begin{equation}
+	U(t)=\left\{
+	\begin{aligned}
+		0, t\in [-\frac{T}{2},0]\\
+		\frac{2U_0}{T}t, t\in[0, \frac{T}{2}]
+	\end{aligned}
+	\right.
+\end{equation}
+\begin{equation}
+	a_n=\frac{2}{T}\left[\int\limits_{\frac{T}{2}}^0 0\cdot\cos{(n\Omega t)} dt+\frac{2U_0}{T}\int\limits_0^{\frac{T}{2}}t\cdot\cos(n\Omega t)dt \right]=...=\frac{U_0}{n^2\pi^2}\cdot(\cos(\pi n)-1)
+\end{equation}
+\begin{equation}
+	b_n=\frac{2}{T}\left[\int\limits_{-\frac{T}{2}}^00\cdot\sin(n\Omega t)dt + \frac{2U_0}{T}\int\limits_0^{\frac{T}{2}}t\cdot\cos(n\Omega t)dt\right]=...=\frac{U_0}{n\pi}\cdot(1-\cos(\pi n))
+\end{equation}
+Даня $a_0$ не посчитал, ну и пёс с ним. Напишу сразу разложение
+\begin{equation}
+	U(t)=\frac{a_0}{2}+\sum_{n=1}^{\inf}\left[\frac{U_0}{\pi^2n^2}\left((-1)^n-1\right)\cdot\cos(n\Omega t)+ \frac{U_0}{\pi n}(1-(-1)^n)\cdot\sin(n\Omega t)\right]
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Меандр}
+\begin{equation}
+	a_n=\frac{2}{T}\int\limits_{-T/4}^{T/4} U_0\cos(n\Omega t)dt=\frac{2U_0}{T}\frac{\sin(n\Omega t)}{n\Omega}\bigg|^{T/4}_{-T/4}=\frac{U_0}{\pi n}\cdot2\sin(\frac{n\pi}{2})
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Заключение}
+
+\end{document}
