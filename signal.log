@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.4.1)  18 APR 2018 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.4.1)  18 APR 2018 23:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1096,32 +1096,141 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2] [3]
-<plot/triangle.pdf, id=63, 462.52798pt x 346.89601pt>
+<plot/triangle.pdf, id=62, 462.52798pt x 346.89601pt>
 File: plot/triangle.pdf Graphic file (type pdf)
 <use plot/triangle.pdf>
-Package pdftex.def Info: plot/triangle.pdf  used on input line 106.
+Package pdftex.def Info: plot/triangle.pdf  used on input line 109.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
- [4 <./plot/triangle.pdf>]
-<plot/pila.pdf, id=82, 462.52798pt x 346.89601pt>
+ [4]
+<plot/pila.pdf, id=67, 462.52798pt x 346.89601pt>
 File: plot/pila.pdf Graphic file (type pdf)
 <use plot/pila.pdf>
-Package pdftex.def Info: plot/pila.pdf  used on input line 135.
+Package pdftex.def Info: plot/pila.pdf  used on input line 139.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-<plot/meandr.pdf, id=83, 462.52798pt x 346.89601pt>
+ [5 <./plot/triangle.pdf>]
+<plot/meandr.pdf, id=86, 462.52798pt x 346.89601pt>
 File: plot/meandr.pdf Graphic file (type pdf)
 <use plot/meandr.pdf>
-Package pdftex.def Info: plot/meandr.pdf  used on input line 149.
+Package pdftex.def Info: plot/meandr.pdf  used on input line 164.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
- [5] [6 <./plot/pila.pdf>] [7 <./plot/meandr.pdf>] (./signal.aux)
+ [6 <./plot/pila.pdf>]
+<pic/sig/triangle.png, id=106, 666.99188pt x 382.42876pt>
+File: pic/sig/triangle.png Graphic file (type png)
+<use pic/sig/triangle.png>
+Package pdftex.def Info: pic/sig/triangle.png  used on input line 174.
+(pdftex.def)             Requested size: 411.14528pt x 235.73788pt.
+<pic/sig/pila.png, id=107, 666.23906pt x 392.96812pt>
+File: pic/sig/pila.png Graphic file (type png)
+<use pic/sig/pila.png>
+Package pdftex.def Info: pic/sig/pila.png  used on input line 180.
+(pdftex.def)             Requested size: 411.14528pt x 242.51042pt.
+
+Overfull \vbox (6.8501pt too high) has occurred while \output is active []
+
+
+[7 <./plot/meandr.pdf> <./pic/sig/triangle.png>]
+<pic/sig/meandr.png, id=125, 679.78969pt x 406.51875pt>
+File: pic/sig/meandr.png Graphic file (type png)
+<use pic/sig/meandr.png>
+Package pdftex.def Info: pic/sig/meandr.png  used on input line 186.
+(pdftex.def)             Requested size: 411.14528pt x 245.86705pt.
+<pic/sint/triangle.png, id=126, 582.67688pt x 346.29375pt>
+File: pic/sint/triangle.png Graphic file (type png)
+<use pic/sint/triangle.png>
+Package pdftex.def Info: pic/sint/triangle.png  used on input line 193.
+(pdftex.def)             Requested size: 411.14528pt x 244.35376pt.
+<pic/sint/pila.png, id=127, 582.67688pt x 339.51843pt>
+File: pic/sint/pila.png Graphic file (type png)
+<use pic/sint/pila.png>
+Package pdftex.def Info: pic/sint/pila.png  used on input line 199.
+(pdftex.def)             Requested size: 411.14528pt x 239.57292pt.
+ [8 <./pic/sig/pila.png> <./pic/sig/meandr.png>]
+<pic/sint/meandr.png, id=131, 581.92406pt x 350.05782pt>
+File: pic/sint/meandr.png Graphic file (type png)
+<use pic/sint/meandr.png>
+Package pdftex.def Info: pic/sint/meandr.png  used on input line 205.
+(pdftex.def)             Requested size: 411.14528pt x 247.33026pt.
+ [9 <./pic/sint/triangle.png (PNG copy)> <./pic/sint/pila.png (PNG copy)>]
+<pic/mod/mod2.png, id=135, 586.44093pt x 356.0803pt>
+File: pic/mod/mod2.png Graphic file (type png)
+<use pic/mod/mod2.png>
+Package pdftex.def Info: pic/mod/mod2.png  used on input line 213.
+(pdftex.def)             Requested size: 411.14528pt x 249.64027pt.
+<pic/mod/mod1.png, id=136, 583.42969pt x 353.06906pt>
+File: pic/mod/mod1.png Graphic file (type png)
+<use pic/mod/mod1.png>
+Package pdftex.def Info: pic/mod/mod1.png  used on input line 218.
+(pdftex.def)             Requested size: 411.14528pt x 248.81674pt.
+<pic/mod/mod3.png, id=137, 778.91pt x 469.755pt>
+File: pic/mod/mod3.png Graphic file (type png)
+<use pic/mod/mod3.png>
+Package pdftex.def Info: pic/mod/mod3.png  used on input line 223.
+(pdftex.def)             Requested size: 411.14528pt x 247.9583pt.
+ [10 <./pic/sint/meandr.png (PNG copy)> <./pic/mod/mod2.png (PNG copy)>]
+<pic/mod/mod4.png, id=141, 582.67688pt x 350.81062pt>
+File: pic/mod/mod4.png Graphic file (type png)
+<use pic/mod/mod4.png>
+Package pdftex.def Info: pic/mod/mod4.png  used on input line 228.
+(pdftex.def)             Requested size: 411.14528pt x 247.54099pt.
+ [11 <./pic/mod/mod1.png (PNG copy)> <./pic/mod/mod3.png (PNG copy)>]
+<pic/int/triangle.png, id=145, 674.52pt x 390.70969pt>
+File: pic/int/triangle.png Graphic file (type png)
+<use pic/int/triangle.png>
+Package pdftex.def Info: pic/int/triangle.png  used on input line 236.
+(pdftex.def)             Requested size: 411.14528pt x 238.1537pt.
+<pic/int/pila.png, id=146, 661.72218pt x 383.18156pt>
+File: pic/int/pila.png Graphic file (type png)
+<use pic/int/pila.png>
+Package pdftex.def Info: pic/int/pila.png  used on input line 242.
+(pdftex.def)             Requested size: 411.14528pt x 238.07878pt.
+<pic/int/meandr.png, id=147, 673.01437pt x 380.17032pt>
+File: pic/int/meandr.png Graphic file (type png)
+<use pic/int/meandr.png>
+Package pdftex.def Info: pic/int/meandr.png  used on input line 248.
+(pdftex.def)             Requested size: 411.14528pt x 232.2458pt.
+
+[12 <./pic/mod/mod4.png (PNG copy)> <./pic/int/triangle.png>]
+<pic/int/triangle_r_1000_c_50000.png, id=152, 663.98062pt x 370.38374pt>
+File: pic/int/triangle_r_1000_c_50000.png Graphic file (type png)
+<use pic/int/triangle_r_1000_c_50000.png>
+Package pdftex.def Info: pic/int/triangle_r_1000_c_50000.png  used on input lin
+e 257.
+(pdftex.def)             Requested size: 411.14528pt x 229.3473pt.
+<pic/int/triangle_r_1000_c_5000.png, id=153, 666.99188pt x 380.92313pt>
+File: pic/int/triangle_r_1000_c_5000.png Graphic file (type png)
+<use pic/int/triangle_r_1000_c_5000.png>
+Package pdftex.def Info: pic/int/triangle_r_1000_c_5000.png  used on input line
+ 262.
+(pdftex.def)             Requested size: 411.14528pt x 234.80978pt.
+ [13 <./pic/int/pila.png> <./pic/int/meandr.png>]
+<pic/diff/triangle.png, id=157, 668.4975pt x 390.70969pt>
+File: pic/diff/triangle.png Graphic file (type png)
+<use pic/diff/triangle.png>
+Package pdftex.def Info: pic/diff/triangle.png  used on input line 270.
+(pdftex.def)             Requested size: 411.14528pt x 240.3059pt.
+<pic/diff/pila.png, id=158, 694.09312pt x 384.6872pt>
+File: pic/diff/pila.png Graphic file (type png)
+<use pic/diff/pila.png>
+Package pdftex.def Info: pic/diff/pila.png  used on input line 276.
+(pdftex.def)             Requested size: 411.14528pt x 227.87329pt.
+ [14 <./pic/int/triangle_r_1000_c_50000.png> <./pic/int/triangle_r_1000_c_5000.
+png>]
+<pic/diff/meandr.png, id=162, 678.28406pt x 386.94562pt>
+File: pic/diff/meandr.png Graphic file (type png)
+<use pic/diff/meandr.png>
+Package pdftex.def Info: pic/diff/meandr.png  used on input line 282.
+(pdftex.def)             Requested size: 411.14528pt x 234.5486pt.
+ [15 <./pic/diff/triangle.png> <./pic/diff/pila.png>] [16 <./pic/diff/meandr.pn
+g>] (./signal.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 37394 strings out of 492982
- 936082 string characters out of 6138580
- 1197622 words of memory out of 5000000
- 40220 multiletter control sequences out of 15000+600000
+ 37480 strings out of 492982
+ 938057 string characters out of 6138580
+ 1199622 words of memory out of 5000000
+ 40294 multiletter control sequences out of 15000+600000
  15054 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,12n,128p,929b,703s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1139,10 +1248,10 @@ f-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/ty
 pe1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
 uper/sfcc1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.p
 fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on signal.pdf (8 pages, 229781 bytes).
+Output written on signal.pdf (17 pages, 584235 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 222 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 234 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,7 +6,7 @@
 \def\labauthors{Понур К.А., Сарафанов Ф.Г., Сидоров Д.А.}
 \def\labgroup{420}
 \def\labnumber{3000}
-\def\labtheme{aqsdfghjkl;}
+\def\labtheme{Гармонический анализ и синтез периодических сигналов}
 \renewcommand{\vec}{\mathbf}
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
@@ -22,7 +22,7 @@
 % \setstretch{1.2}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \section{Теоретическая часть}
+\section{Введение}
  	Изменяющийся во времени сигнал $S(t)$ называется периодическим, если для него выполняется условие
  	\begin{equation}
  		S(t)=S(t+kT),
@@ -76,14 +76,17 @@
 
  3. При увеличении периода сигнала $T$ расстояние по оси частот между соседними спектральными компонентами уменьшается, то есть спектр становится более <<плотным>>;
  4. Для импульсных сигналов, у которых промежуток времени, когда сигнал отличен от нуля, неизменен, при увеличении периода величина Фурье-компонент уменьшаетсмя обратно пропорционально T.
-\section{Разложения в ряд Фурье}
-\subsection{Треугольник}
+
+\newpage
+\section{Расчет, синтез и экспериментальное получение различных сигналов}
+\subsection{Разложения в ряд Фурье}
+\subsubsection{Треугольник}
 Функция имеет вид 
 \begin{equation}
 	U(t)=\left\{
 	\begin{aligned}
-		U_0+\frac{4U_0}{T}t, t\in [-\frac{T}{2},0]\\
-		U_0-\frac{4U_0}{T}t, t\in[0, \frac{T}{2}]
+		U_0+\frac{4U_0}{T}t,\quad &t\in [-\frac{T}{2},0]\\
+		U_0-\frac{4U_0}{T}t,\quad &t\in[0, \frac{T}{2}]
 	\end{aligned}
 	\right.
 \end{equation}
@@ -104,22 +107,17 @@
 \begin{figure}[tb]
 	\centering
 	\includegraphics[]{plot/triangle}
-	\caption{Caption here}
+	\caption{Сигнал <<треугольник>> по 100 первым гармоникам}
 	\label{fig:figure1}
 \end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\textwidth]{pic/triangle.png}
-	\caption{}
-	
-\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Пила}
+\subsubsection{Пила}
 \begin{equation}
 	U(t)=\left\{
 	\begin{aligned}
-		0, t\in [-\frac{T}{2},0]\\
-		\frac{2U_0}{T}t, t\in[0, \frac{T}{2}]
+		0, \quad &t\in [-\frac{T}{2},0]\\
+		\frac{2U_0}{T}t, \quad &t\in[0, \frac{T}{2}]
 	\end{aligned}
 	\right.
 \end{equation}
@@ -139,37 +137,154 @@
 \begin{figure}[tb]
 	\centering
 	\includegraphics[]{plot/pila}
-	\caption{Caption here}
+	\caption{Сигнал <<пила>> по 100 первым гармоникам}
 	\label{fig:figure1}
 \end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\textwidth]{pic/saw_s.png}
-	\caption{}
-	
-\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Меандр}
+\subsubsection{Меандр}
+\begin{equation}
+	U(t)=\left\{
+	\begin{aligned}
+		-U_0,\quad &t\in [-\frac{T}{2},0]\\
+		U_0,\quad &t\in[0, \frac{T}{2}]
+	\end{aligned}
+	\right.
+\end{equation}
+В силу нечетности $a_n\equiv 0$.
 \begin{equation}
 	b_n=\frac{4U_0}{T}\int\limits_{0}^{T/2} \sin(n\Omega t)dt=\frac{2U_0}{\pi n}(1-\cos(\pi n))
 \end{equation}
+И тогда
 \begin{equation}
 	U(t)=\sum_{n=1}^{\infty}\frac{2U_0}{\pi n}(1-(-1)^n)\cdot\sin(n\Omega t)
 \end{equation}
 \begin{figure}[tb]
 	\centering
 	\includegraphics[]{plot/meandr}
-	\caption{Caption here}
+	\caption{Сигнал <<меандр>> по 100 первым гармоникам}
 	\label{fig:figure1}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Спектры сигналов с установки}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/sig/triangle.png}
+	\caption{Сигнал <<треугольник>>}
+	
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.85\textwidth]{pic/meandr_1.png}
-	\caption{}
+	\includegraphics[width=0.85\textwidth]{pic/sig/pila.png}
+	\caption{Сигнал <<пила>>}
 	
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\section{Заключение}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/sig/meandr.png}
+	\caption{Сигнал <<меандр>>}
+\end{figure}
+
+\subsection{Синтезированные сигналы}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/sint/triangle.png}
+	\caption{Сигнал <<треугольник>>}
+	
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/sint/pila.png}
+	\caption{Сигнал <<пила>>}
+	
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/sint/meandr.png}
+	\caption{Сигнал <<меандр>>}
+	
+\end{figure}
+
+\subsection{Синтез амплитудно-- и частотно-- модулированных сигналов}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/mod/mod2.png}
+	\caption{Амплитудная модуляция с $m=0.20$}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/mod/mod1.png}
+	\caption{Амплитудная модуляция с $m=1$}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/mod/mod3.png}
+	\caption{Фазовая модуляция с  $m=0.25$}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/mod/mod4.png}
+	\caption{Фазовая модуляция с  $m=1$}
+\end{figure}
+\subsection{Форма сигналов при дифферинцировании и интегрировании}
+\subsubsection{Интегрированные сигналы}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/int/triangle.png}
+	\caption{Сигнал <<треугольник>>}
+	
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/int/pila.png}
+	\caption{Сигнал <<пила>>}
+	
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/int/meandr.png}
+	\caption{Сигнал <<меандр>>}
+	
+\end{figure}
+
+% \paragraph{Некоторые значения $\tau=RC$}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/int/triangle_r_1000_c_50000.png}
+	\caption{Сигнал <<треугольник>>, $R=1000$ Ом, $C=50000$ пкФ}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/int/triangle_r_1000_c_5000.png}
+	\caption{Сигнал <<треугольник>>, $R=1000$ Ом, $C=5000$ пкФ}
+\end{figure}
+
+\subsubsection{Дифференцированные сигналы}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/diff/triangle.png}
+	\caption{Сигнал <<треугольник>>}
+	
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/diff/pila.png}
+	\caption{Сигнал <<пила>>}
+	
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{pic/diff/meandr.png}
+	\caption{Сигнал <<меандр>>}	
+\end{figure}
+
+
+
+% \section{Заключение}
 
 \end{document}
